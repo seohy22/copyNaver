@@ -83,6 +83,7 @@ a {
     border: 0px;
     background: none;
     outline-style: none;
+    width: 100%;
 }
 
 .container .pwField {
@@ -105,7 +106,7 @@ a {
 .container .pwField #inputPw {
     font-size: medium;
     margin: 10px;
-    width: 400px;
+    width: 100%;
     border: 0px;
     background: none;
     outline-style: none;
