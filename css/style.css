@@ -11,7 +11,7 @@ a {
 
 .mainWrap {
     padding: 10px 0 10px 0;
-    width: 600px;
+    width:100%;
     text-align: center;
     background-color: #f8f8f8;
     margin: 0 auto;
@@ -85,10 +85,6 @@ a {
     border: 0px;
     background: none;
     outline-style: none;
-}
-
-.container .idField #inputId:focus {
-    
 }
 
 .container .pwField {
@@ -184,7 +180,7 @@ input[type=checkbox]:not(old) {
 }
 
 #sep {
-    broder:none;
+    border:none;
     padding: 0 2px;
 }
 
