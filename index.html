@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
     <title>연습Naver</title>
     <link rel="stylesheet" href="css/style.css">
 
@@ -26,20 +26,22 @@
         <!-- container -->
         <div class="container">
             <div class="content">
-                <form action="" method="POST">
-                    <fieldset id="loginFieldSet">
-                        <div class="idField">
-                            <span><label for="inputId">아이디</label></span>
-                            <input id="inputId" type="text" placeholder="아이디" autofocus>
-                        </div>
-                    
-                        <div class="pwField">
-                            <label for="inputPw">비밀번호</label>
-                            <input id ="inputPw" type="password" placeholder="비밀번호">
-                        </div>
-                        <button id="loginBtn">로그인</button>
-                    </fieldset>
-                </form>
+                <div id="member">
+                    <form action="" method="POST">
+                        <fieldset id="loginFieldSet">
+                            <div class="idField">
+                                <span><label for="inputId">아이디</label></span>
+                                <input id="inputId" type="text" placeholder="아이디" autofocus>
+                            </div>
+                        
+                            <div class="pwField">
+                                <label for="inputPw">비밀번호</label>
+                                <input id ="inputPw" type="password" placeholder="비밀번호">
+                            </div>
+                            <button id="loginBtn">로그인</button>
+                        </fieldset>
+                    </form>
+                </div>
                 <div class="loginOption" >
                     <div class="remember">
                         <input type="checkbox" name="rememberMe" id="rememberMe">

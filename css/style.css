@@ -63,7 +63,6 @@ a {
     background: #fff;
     height: 40px;
     text-align: left;
-    
 }
 
 .container .idField label{
@@ -151,7 +150,7 @@ input[type=checkbox]:not(old) {
 
 .container .content .loginOther .otherBtn {
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     padding-top:25px;
 }
 
@@ -172,7 +171,7 @@ input[type=checkbox]:not(old) {
 }
 
 .loginBanner {
-    width:430px;
+    width: 350px;
     height:150px;
     margin: 0 auto;
     border:1px solid #999;
@@ -193,13 +192,14 @@ input[type=checkbox]:not(old) {
 }
 
 .loginBanner img{
-    width: 430px;
+    width: 350px;
     height: 100%;
 }
 
 @media (min-width:320px) and (max-width:786px) {
     .container{
         margin:10px;
+        width: auto;
     }
     .footer{
         display: none;
@@ -207,9 +207,19 @@ input[type=checkbox]:not(old) {
     .content {
         width:100%;
     }
-    .container .idField label,
-    .container .pwField label{
-        width:90%
+    #loginFieldSet{
+        width:auto;
     }
-
+    .loginBanner {
+        width:100%;
+    }
+    .loginBanner img{
+        width:100%;
+    }
+}
+@media (max-width:500px) {
+    .container .idField label,
+    .pwField label{
+        display:none;
+    }
 }
