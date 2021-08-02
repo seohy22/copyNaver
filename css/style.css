@@ -11,16 +11,14 @@ a {
 
 .mainWrap {
     padding: 10px 0 10px 0;
-    width:100%;
     text-align: center;
     background-color: #f8f8f8;
-    margin: 0 auto;
 }
 
 .mainWrap .header .langSel {
-    text-align: right;
-    margin-right: 10px;
-    width:100%;
+    position:absolute;
+    top:20px;
+    right:10px;
 }
 
 .mainWrap .header .langSel #language {
@@ -45,10 +43,10 @@ a {
     font-size: 35px;
 }
 
-.container {
+/* .container {
     width:450px;
     margin: 0 auto;
-}
+} */
 .content {
     width: 450px;
     margin: 0 auto;
@@ -57,31 +55,31 @@ a {
 
 #loginFieldSet {
     border: none;
+    width:100%;
 }
 
 .container .idField {
     border: 1px solid #999;
     background: #fff;
-    width: 100%;
     height: 40px;
     text-align: left;
+    
 }
 
 .container .idField label{
     font-size:medium;
-    width: 430px;
+    width: 400px;
     outline-style: none;
     display: block;
     position: absolute;
     color:rgba(255, 255, 255, 0);
     margin : 9px 0 11px 12px;
-    
+    cursor: pointer;
 }
 
 .container .idField #inputId {
     font-size: medium;
     margin: 10px;
-    width: 400px;
     border: 0px;
     background: none;
     outline-style: none;
@@ -90,7 +88,6 @@ a {
 .container .pwField {
     border: 1px solid #999;
     background: #fff;
-    width: 100%;
     height: 40px;
     text-align: left;
     margin-top: 10px;
@@ -153,7 +150,7 @@ input[type=checkbox]:not(old) {
 
 .container .content .loginOther .otherBtn {
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     padding-top:25px;
 }
 
@@ -170,12 +167,13 @@ input[type=checkbox]:not(old) {
     padding-top:10px;
     font-size: 14px;
     color:#999;
+    margin-bottom: 40px;
 }
 
 .loginBanner {
-    width:100%;
+    width:430px;
     height:150px;
-    margin-top: 40px;
+    margin: 0 auto;
     border:1px solid #999;
 }
 
@@ -194,6 +192,23 @@ input[type=checkbox]:not(old) {
 }
 
 .loginBanner img{
-    width:100%;
+    width: 430px;
     height: 100%;
+}
+
+@media (min-width:320px) and (max-width:786px) {
+    .container{
+        margin:10px;
+    }
+    .footer{
+        display: none;
+    }
+    .content {
+        width:100%;
+    }
+    .container .idField label,
+    .container .pwField label{
+        width:90%
+    }
+
 }
