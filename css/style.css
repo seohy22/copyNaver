@@ -67,22 +67,13 @@ a {
 
 .container .idField label{
     font-size:medium;
-    width: 400px;
+    width: 90%;
     outline-style: none;
     display: block;
     position: absolute;
     color:rgba(255, 255, 255, 0);
     margin : 9px 0 11px 12px;
     cursor: pointer;
-}
-
-.container .idField #inputId {
-    font-size: medium;
-    margin: 10px;
-    border: 0px;
-    background: none;
-    outline-style: none;
-    width: 100%;
 }
 
 .container .pwField {
@@ -94,7 +85,7 @@ a {
 }
 .container .pwField label{
     font-size:medium;
-    width: 400px;
+    width: 90%;
     outline-style: none;
     display: block;
     position: absolute;
@@ -102,10 +93,23 @@ a {
     margin : 9px 0 11px 12px;
     
 }
+
+.container .idField #inputId {
+    font-size: medium;
+    position: relative;
+    top:8px;
+    left:5px;
+    width: 95%;
+    border: 0px;
+    background: none;
+    outline-style: none;
+}
 .container .pwField #inputPw {
     font-size: medium;
-    margin: 10px;
-    width: 100%;
+    position: relative;
+    top:8px;
+    left:5px;
+    width: 95%;
     border: 0px;
     background: none;
     outline-style: none;
@@ -139,6 +143,18 @@ a {
 .loginOther>span{
     font-size: 20px
 }
+/* input[id="rememberMe"]{
+    display: none;
+} */
+
+/* input[id="rememberMe"] + label {
+    /* display: inline-block; */
+    /* width:20px;
+    height:20px;
+    background:url(image\check.jpg) no-repeat 0 0;
+    vertical-align: middle; */
+/* } */
+
 /* 
 input[type=checkbox]:not(old) {
     margin:0; 
@@ -216,10 +232,26 @@ input[type=checkbox]:not(old) {
     .loginBanner img{
         width:100%;
     }
+    .container .idField label,
+    .container .pwField label{
+        width:90%;
+    }
 }
 @media (max-width:500px) {
-    .container .idField label,
+    /* .container .idField label,
     .pwField label{
         display:none;
+    } */
+    #option1 {
+        margin-right: 10px;
     }
+}
+
+
+/* input 자동입력 시 배경색 제거 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }
