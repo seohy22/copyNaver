@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+    color:#000;
+}
+
+.mainWrap {
+    padding: 10px 0 10px 0;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.mainWrap .header .langSel {
+    position:absolute;
+    top:20px;
+    right:10px;
+}
+
+.mainWrap .header .langSel #language {
+    padding: 4px;
+    width: 80px;
+    border: 1px solid #999;
+    font-size: 12px;
+}
+
+/* 
+.mainWrap .container .content .loginField {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+} */
+
+.mainWrap .header .logo .title {
+    color: #03C75B;
+    font-size: 35px;
+}
+
+/* .container {
+    width:450px;
+    margin: 0 auto;
+} */
+.content {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.container .idField {
+    border: 1px solid #999;
+    background: #fff;
+    height: 40px;
+    text-align: left;
+}
+
+.container .idField label{
+    font-size:medium;
+    width: 90%;
+    outline-style: none;
+    display: block;
+    position: absolute;
+    color:rgba(255, 255, 255, 0);
+    margin : 9px 0 11px 12px;
+    cursor: pointer;
+}
+
+.container .pwField {
+    border: 1px solid #999;
+    background: #fff;
+    height: 40px;
+    text-align: left;
+    margin-top: 10px;
+}
+.container .pwField label{
+    font-size:medium;
+    width: 90%;
+    outline-style: none;
+    display: block;
+    position: absolute;
+    color:rgba(255, 255, 255, 0);
+    margin : 9px 0 11px 12px;
+    
+}
+
+.container .idField #inputId {
+    font-size: medium;
+    position: relative;
+    top:8px;
+    left:5px;
+    width: 95%;
+    border: 0px;
+    background: none;
+    outline-style: none;
+}
+.container .pwField #inputPw {
+    font-size: medium;
+    position: relative;
+    top:8px;
+    left:5px;
+    width: 95%;
+    border: 0px;
+    background: none;
+    outline-style: none;
+}
+
+#loginBtn {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    border: 1px solid #999;
+    background: #03C75B;
+    font-size: medium;
+    color: #fff;
+    height:50px
+}
+
+.loginOption{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width:100%;
+}
+
+
+.loginOther{
+    border-top: 1px solid #999;
+    padding-top:25px;
+}
+
+.loginOther>span{
+    font-size: 20px
+}
+/* input[id="rememberMe"]{
+    display: none;
+} */
+
+/* input[id="rememberMe"] + label {
+    /* display: inline-block; */
+    /* width:20px;
+    height:20px;
+    background:url(image\check.jpg) no-repeat 0 0;
+    vertical-align: middle; */
+/* } */
+
+/* 
+input[type=checkbox]:not(old) {
+    margin:0; 
+    padding:0;
+    opacity:0;
+    background:url(./check.jpg) no-repeat 0 0;
+    width:0;
+} */
+
+.container .content .loginOther .otherBtn {
+    display: flex;
+    justify-content:space-between;
+    padding-top:25px;
+}
+
+#option1, #option2 {
+    border: 1px solid #03C75B;
+    width:42%;
+    padding:15px;
+    font-size: 15px;
+    background: #fff;
+    text-align: center;
+}
+
+.loginOther .loginSupport {
+    padding-top:10px;
+    font-size: 14px;
+    color:#999;
+    margin-bottom: 40px;
+}
+
+.loginBanner {
+    width: 350px;
+    height:150px;
+    margin: 0 auto;
+    border:1px solid #999;
+}
+
+#sep {
+    border:none;
+    padding: 0 2px;
+}
+
+.footer {
+    padding-top:40px;
+    font-size: 12px;
+}
+
+.footer .copyright {
+    font-size:10px;
+}
+
+.loginBanner img{
+    width: 350px;
+    height: 100%;
+}
+
+@media (min-width:320px) and (max-width:786px) {
+    .container{
+        margin:10px;
+        width: auto;
+    }
+    .footer{
+        display: none;
+    }
+    .content {
+        width:100%;
+    }
+    .loginBanner {
+        width:100%;
+    }
+    .loginBanner img{
+        width:100%;
+    }
+    .container .idField label,
+    .container .pwField label{
+        width:90%;
+    }
+}
+@media (max-width:500px) {
+    /* .container .idField label,
+    .pwField label{
+        display:none;
+    } */
+    #option1 {
+        margin-right: 10px;
+    }
+}
+
+
+/* input 자동입력 시 배경색 제거 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
