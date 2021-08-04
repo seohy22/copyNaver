@@ -50,16 +50,21 @@ a {
     margin-top: 30px;
 }
 
+.member{
+    width:100%;
+}
+
 .container .idField {
     border: 1px solid #999;
     background: #fff;
     height: 40px;
     text-align: left;
+    cursor: pointer;
 }
 
 .container .idField label{
     font-size:medium;
-    width: 90%;
+    width: 50%;
     outline-style: none;
     display: block;
     position: absolute;
@@ -74,16 +79,17 @@ a {
     height: 40px;
     text-align: left;
     margin-top: 10px;
+    cursor: pointer;
 }
 .container .pwField label{
     font-size:medium;
-    width: 90%;
+    width: 50%;
     outline-style: none;
     display: block;
     position: absolute;
     color:rgba(255, 255, 255, 0);
     margin : 9px 0 11px 12px;
-    
+    cursor:pointer;
 }
 
 .container .idField #inputId {
@@ -95,6 +101,7 @@ a {
     border: 0px;
     background: none;
     outline-style: none;
+    cursor:pointer;
 }
 .container .pwField #inputPw {
     font-size: medium;
@@ -105,6 +112,7 @@ a {
     border: 0px;
     background: none;
     outline-style: none;
+    cursor:pointer;
 }
 
 #loginBtn {
@@ -116,7 +124,8 @@ a {
     background: #03C75B;
     font-size: medium;
     color: #fff;
-    height:50px
+    height:50px;
+    cursor:pointer;
 }
 
 .loginOption{
@@ -126,35 +135,37 @@ a {
     width:100%;
 }
 
-
 .loginOther{
     border-top: 1px solid #999;
     padding-top:25px;
 }
 
-.loginOther>span{
-    font-size: 20px
+.loginOption input[type="checkbox"] {
+    display:none;
 }
-/* input[id="rememberMe"]{
-    display: none;
-} */
+.loginOption input[type=checkbox]+label {
+    display: inline-block;
+    cursor:pointer;
+    line-height: 22px;
+    padding-left:22px;
+    background:url('/image/check.png') left/22px no-repeat;
+}
 
-/* input[id="rememberMe"] + label {
-    /* display: inline-block; */
-    /* width:20px;
-    height:20px;
-    background:url(image\check.jpg) no-repeat 0 0;
-    vertical-align: middle; */
-/* } */
+.loginOption input[type=checkbox]:checked+label{
+    background-image: url('/image/checked.png');
+}
 
-/* 
-input[type=checkbox]:not(old) {
-    margin:0; 
-    padding:0;
-    opacity:0;
-    background:url(./check.jpg) no-repeat 0 0;
-    width:0;
-} */
+.ipSec #ipOnOff {
+    border:none;
+    background: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor:pointer;
+    color: #03C75B;
+}
+.ipSec #ipOnOff.clicked {
+    color:#000;
+}
 
 .container .content .loginOther .otherBtn {
     display: flex;
@@ -194,11 +205,9 @@ input[type=checkbox]:not(old) {
     padding-top:40px;
     font-size: 12px;
 }
-
 .footer .copyright {
     font-size:10px;
 }
-
 .loginBanner img{
     width: 350px;
     height: 100%;
@@ -225,6 +234,7 @@ input[type=checkbox]:not(old) {
     .container .pwField label{
         width:90%;
     }
+    .popUp {display: none;}
 }
 @media (max-width:500px) {
     /* .container .idField label,
@@ -243,4 +253,28 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
+}
+
+.popUp{
+    position: absolute;
+    text-align: left;
+}
+.popUp span{
+    position: relative;
+    color:#fff;
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+    right:85px;
+    top:5px;
+    padding:3px;
+    padding-left:6px;
+    background: linear-gradient(to right,#146df3,#dbbaf7);
+}
+
+#popClose {
+    border:none;
+    background: none;
+    padding-left:7px;
+    margin:0;
+    cursor: pointer;
 }

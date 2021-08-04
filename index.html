@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
     <title>연습Naver</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="/js/main.js"></script>
 </head>
 <body>
     <div class="mainWrap">
@@ -36,18 +37,24 @@
                             <label for="inputPw">비밀번호</label>
                             <input id ="inputPw" type="password" placeholder="비밀번호">
                         </div>
-                        <button id="loginBtn">로그인</button>
+                        <button type="submit" id="loginBtn">로그인</button>
                     </form>
                 </div>
-                <div class="loginOption" >
-                    <div class="remember">
+                <div class="loginOption">
+                    <div class="remeberChk">
                         <input type="checkbox" name="rememberMe" id="rememberMe">
                         <label for="rememberMe">로그인 상태 유지</label>
                     </div>
-                    <span>IP 보안</span>
+                    <div class="ipSec">
+                        <span>IP 보안</span>
+                        <button type="button" id="ipOnOff" onclick="change()">ON</button>
+                    </div>
                 </div>
                 <div class="loginOther">
                     <span>더욱 간편한 로그인</span>
+                    <div class="popUp" id="popUp" >
+                        <span>PC방 등 공용 PC라면 안전하게 사용해 보세요.<button type="button" id="popClose" onclick="delPop()">X</button></span>
+                    </div>
                     <div class="otherBtn">
                         <div id="option1">
                             <span><img src="./image/qr.jpg" style="width:26px; height:26px; vertical-align: middle;" alt="qr로그인"></span>
