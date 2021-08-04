@@ -146,11 +146,11 @@ a {
     cursor:pointer;
     line-height: 22px;
     padding-left:22px;
-    background:url('/image/check.png') left/22px no-repeat;
+    background:url('../image/check.png') left/22px no-repeat;
 }
 
 .loginOption input[type=checkbox]:checked+label{
-    background-image: url('/image/checked.png');
+    background-image: url('../image/checked.png');
 }
 
 .ipSec #ipOnOff {
