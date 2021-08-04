@@ -148,11 +148,11 @@ a {
     cursor:pointer;
     line-height: 22px;
     padding-left:22px;
-    background:url('/image/check.png') left/22px no-repeat;
+    background:url('./image/check.png') left/22px no-repeat;
 }
 
 .loginOption input[type=checkbox]:checked+label{
-    background-image: url('/image/checked.png');
+    background-image: url('./image/checked.png');
 }
 
 .ipSec #ipOnOff {
@@ -213,7 +213,7 @@ a {
     height: 100%;
 }
 
-@media (min-width:320px) and (max-width:786px) {
+@media (max-width:786px) {
     .container{
         margin:10px;
         width: auto;
