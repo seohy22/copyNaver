@@ -2,25 +2,20 @@ body {
     margin: 0;
     padding: 0;
     background: #f8f8f8;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
     color:#000;
 }
-.mainWrap {
-    padding: 10px 0 10px 0;
-    text-align: center;
-    background-color: #f8f8f8;
-}
 
-.mainWrap .header .langSel {
+.header .langSel {
     position:absolute;
     top:20px;
     right:10px;
 }
-
-.mainWrap .header .langSel #language {
+.header .langSel #language {
     padding: 4px;
     width: 80px;
     border: 1px solid #999;
@@ -28,13 +23,12 @@ a {
 }
 
 /* 
-.mainWrap .container .content .loginField {
+.container .content .loginField {
     display: flex;
     justify-content: center;
     flex-direction: row;
 } */
-
-.mainWrap .header .logo .title {
+.header .logo .title {
     color: #03C75B;
     font-size: 35px;
 }
@@ -90,6 +84,7 @@ a {
     margin : 9px 0 11px 12px;
     cursor:pointer;
 }
+
 .container .idField #inputId {
     font-size: medium;
     position: relative;
@@ -141,16 +136,16 @@ a {
 .loginOption input[type="checkbox"] {
     display:none;
 }
-.loginOption input[type=checkbox]+label {
+.loginOption input[id="rememberMe"]+label {
     display: inline-block;
     cursor:pointer;
     line-height: 22px;
     padding-left:22px;
-    background:url('../image/check.png') left/22px no-repeat;
+    background:url('/image/check.png') left/22px no-repeat;
 }
 
 .loginOption input[type=checkbox]:checked+label{
-    background-image: url('../image/checked.png');
+    background-image: url('/image/checked.png');
 }
 
 .ipSec #ipOnOff {
@@ -161,6 +156,7 @@ a {
     cursor:pointer;
     color: #03C75B;
 }
+
 .ipSec #ipOnOff.clicked {
     color:#000;
 }
@@ -173,13 +169,26 @@ a {
 
 #option1, #option2 {
     border: 1px solid #03C75B;
-    width:42%;
-    padding:15px;
-    font-size: 15px;
+    width:45%;
     background: #fff;
     text-align: center;
 }
-
+#option1 button {
+    width:100%;
+    padding:15px;
+    font-size: 15px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+#option2 button {
+    width:100%;
+    padding:15px;
+    font-size: 15px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
 .loginOther .loginSupport {
     padding-top:10px;
     font-size: 14px;

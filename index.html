@@ -7,90 +7,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
     <title>연습Naver</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="./js/main.js"></script>
+    <script src="/js/main.js"></script>
 </head>
 <body>
-    <div class="mainWrap">
-        <div class="header">
-            <div class="langSel">
-                <select name="language" id="language">
-                    <option value="한국어">한국어</option>
-                    <option value="영어">English</option>
-                    <option value="중국어1">中文1</option>
-                    <option value="중국어2">中文2</option>
-                </select>
+    <div class="header">
+        <div class="langSel">
+            <select name="language" id="language">
+                <option value="한국어">한국어</option>
+                <option value="영어">English</option>
+                <option value="중국어1">中文1</option>
+                <option value="중국어2">中文2</option>
+            </select>
+        </div>
+        <div class="logo">
+            <span class="title"><h1>NAVER</h1></span>
+        </div>
+    </div>
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+            <div id="member">
+                <form action="" method="POST">
+                    <div class="idField">
+                        <span><label for="inputId">아이디</label></span>
+                        <input id="inputId" type="text" placeholder="아이디" autofocus>
+                    </div>
+                    <div class="pwField">
+                        <label for="inputPw">비밀번호</label>
+                        <input id ="inputPw" type="password" placeholder="비밀번호">
+                    </div>
+                    <button type="submit" id="loginBtn">로그인</button>
+                </form>
             </div>
-            <div class="logo">
-                <span class="title"><h1>NAVER</h1></span>
+            <div class="loginOption">
+                <div class="remeberChk">
+                    <input type="checkbox" name="rememberMe" id="rememberMe">
+                    <label for="rememberMe">로그인 상태 유지</label>
+                </div>
+                <div class="ipSec">
+                    <span>IP 보안</span>
+                    <button type="button" id="ipOnOff" onclick="change()">ON</button>
+                </div>
+            </div>
+            <div class="loginOther">
+                <span>더욱 간편한 로그인</span>
+                <div class="popUp" id="popUp" >
+                    <span>PC방 등 공용 PC라면 안전하게 사용해 보세요.<button type="button" id="popClose" onclick="delPop()">X</button></span>
+                </div>
+                <div class="otherBtn">
+                    <div id="option1">
+                        <button>
+                        <span><img src="./image/qr.jpg" style="width:26px; height:26px; vertical-align: middle;" alt="qr로그인"></span>
+                        <span>QR코드 로그인</span></button>
+                    </div>
+                    <div id="option2">
+                        <button>
+                        <span><img src="./image/tempLogin.jpg" style="width:20px; height:26px; vertical-align: middle;" alt="qr로그인"></span>
+                        <span>일회용 번호 로그인</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="loginSupport">
+                    <span> 아이디 찾기 </span>
+                    <span id="sep">|</span>
+                    <span>비밀번호 찾기</span>
+                    <span id="sep">|</span>
+                    <span>회원가입</span>
+                </div>
+            </div>
+            <div class="loginBanner">
+                <img src="./image/m_banner_2step_924x294.png" alt="banner here!">
             </div>
         </div>
-        <!-- container -->
-        <div class="container">
-            <div class="content">
-                <div id="member">
-                    <form action="" method="POST">
-                        <div class="idField">
-                            <span><label for="inputId">아이디</label></span>
-                            <input id="inputId" type="text" placeholder="아이디" autofocus>
-                        </div>
-                        <div class="pwField">
-                            <label for="inputPw">비밀번호</label>
-                            <input id ="inputPw" type="password" placeholder="비밀번호">
-                        </div>
-                        <button type="submit" id="loginBtn">로그인</button>
-                    </form>
-                </div>
-                <div class="loginOption">
-                    <div class="remeberChk">
-                        <input type="checkbox" name="rememberMe" id="rememberMe">
-                        <label for="rememberMe">로그인 상태 유지</label>
-                    </div>
-                    <div class="ipSec">
-                        <span>IP 보안</span>
-                        <button type="button" id="ipOnOff" onclick="change()">ON</button>
-                    </div>
-                </div>
-                <div class="loginOther">
-                    <span>더욱 간편한 로그인</span>
-                    <div class="popUp" id="popUp" >
-                        <span>PC방 등 공용 PC라면 안전하게 사용해 보세요.<button type="button" id="popClose" onclick="delPop()">X</button></span>
-                    </div>
-                    <div class="otherBtn">
-                        <div id="option1">
-                            <span><img src="./image/qr.jpg" style="width:26px; height:26px; vertical-align: middle;" alt="qr로그인"></span>
-                            <span>QR코드 로그인</span>
-                        </div>
-                        <div id="option2">
-                            <span><img src="./image/tempLogin.jpg" style="width:20px; height:26px; vertical-align: middle;" alt="qr로그인"></span>
-                            <span>일회용 번호 로그인</span>
-                        </div>
-                    </div>
-                    <div class="loginSupport">
-                        <span> 아이디 찾기 </span>
-                        <span id="sep">|</span>
-                        <span>비밀번호 찾기</span>
-                        <span id="sep">|</span>
-                        <span>회원가입</span>
-                    </div>
-                </div>
-                <div class="loginBanner">
-                    <img src="./image/m_banner_2step_924x294.png" alt="banner here!">
-                </div>
-            </div>
+    </div>
+    <div class="footer">
+        <div class="otherFoot">
+            
+            <span><a href="http://www.naver.com/rules/service.html">이용약관</a></span>
+            <span id="sep">|</span>
+            <span style="font-weight: bold;"><a href="http://www.naver.com/rules/privacy.html">개인정보처리방침</a></span>
+            <span id="sep">|</span>
+            <span><a href="http://www.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a></span>
+            <span id="sep">|</span>
+            <span><a href="https://help.naver.com/support/service/main.nhn?serviceNo=532">회원정보 고객센터</a></span>
         </div>
-        <div class="footer">
-            <div class="otherFoot">
-                
-                <span><a href="http://www.naver.com/rules/service.html">이용약관</a></span>
-                <span id="sep">|</span>
-                <span style="font-weight: bold;"><a href="http://www.naver.com/rules/privacy.html">개인정보처리방침</a></span>
-                <span id="sep">|</span>
-                <span><a href="http://www.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a></span>
-                <span id="sep">|</span>
-                <span><a href="https://help.naver.com/support/service/main.nhn?serviceNo=532">회원정보 고객센터</a></span>
-            </div>
-            <div class="copyright">Copyright © NAVER Corp. All Rights Reserved.</div>
-        </div>
+        <div class="copyright">Copyright © NAVER Corp. All Rights Reserved.</div>
     </div>
 </body>
 </html>
